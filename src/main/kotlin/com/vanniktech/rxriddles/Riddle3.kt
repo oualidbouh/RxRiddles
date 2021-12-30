@@ -1,6 +1,7 @@
 package com.vanniktech.rxriddles
 
 import io.reactivex.rxjava3.core.Observable
+import jdk.nashorn.internal.objects.NativeRegExp.test
 
 object Riddle3 {
   /**
@@ -9,6 +10,6 @@ object Riddle3 {
    * Use case: You want to filter certain items out.
    */
   fun solve(source: Observable<Int>): Observable<Int> {
-    TODO()
+    return source.filter { i -> i % 2 == 0 }
   }
 }
